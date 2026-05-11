@@ -15,8 +15,4 @@ The Analytical Mindset: I don't just follow tutorials; I map every lab to the MI
 
 The Technical Toolkit 
 
-  Category                   Tools & Frameworks
-Visibility          Splunk, Microsoft Sentinel, Wazuh, ELK
-Investigation       Wireshark, Suricata, Zeek
-Detection           Sigma Rules, YARA, Custom SPL Queries
-Methodology         MITRE ATT&CK, NIST 800-61, OSINT
+CategoryTools & FrameworksVisibilitySplunk, Microsoft Sentinel, Wazuh, ELKInvestigationWireshark, Suricata, ZeekDetectionSigma Rules, YARA, Custom SPL QueriesMethodologyMITRE ATT&CK, NIST 800-61, OSINT
