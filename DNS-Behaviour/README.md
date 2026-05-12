@@ -41,7 +41,7 @@ To validate that this traffic is indeed "Normal," I performed a mental audit bas
 ---
 
 #### **🕵️ SOC Analyst Technical Insight**
-Looking at the packet details for the selected frame in **normal dns.flags re.jpg**, the **Total Length is 81 bytes**. Standard, non-malicious DNS queries are typically small. If this were **DNS Tunneling** for C2 communication, we would expect to see significantly larger packet lengths (e.g., 200+ bytes) as the attacker attempts to "stuff" encoded data into the DNS query fields.![Uploading baselin DNS.jpg…]()
+Looking at the packet details for the selected frame in **figure 1**, the **Total Length is 81 bytes**. Standard, non-malicious DNS queries are typically small. If this were **DNS Tunneling** for C2 communication, we would expect to see significantly larger packet lengths (e.g., 200+ bytes) as the attacker attempts to "stuff" encoded data into the DNS query fields.
 
 
 ### **Step 2: Automated Behaviour (The Pulse)**
