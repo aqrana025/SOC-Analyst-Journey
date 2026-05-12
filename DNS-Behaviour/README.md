@@ -27,6 +27,17 @@ In this initial capture, I am establishing a baseline of standard outbound DNS q
 
 *Figure 1: Wireshark capture highlighting diverse, aperiodic DNS queries.*
 
+#### **The Expert "Think" Points (SOC Recap)**
+To validate that this traffic is indeed "Normal," I performed a mental audit based on standard SOC triage procedures:
+
+*   **Is the source IP expected?** Yes, `192.168.10.139` is a known internal workstation within the lab environment.
+*   **Are the domains reputable?** Yes, the destinations include `Mozilla`, `Google`, and `Youtube`, which are high-reputation, expected domains for a user.
+*   **Is there any 'Entropy'?** No. The domains are readable English. There are no signs of DGA (Domain Generation Algorithms) or "gibberish" strings like `asdf88asdf.com`.
+*   **Is the timing human-like?** Yes, the irregular spacing between requests confirms manual browsing rather than a rhythmic, automated bot.
+
+> **Baseline Status: COMPLETE.** 🟢
+> We have successfully defined what "Normal" looks like. Any deviation from these patterns in the following steps will be treated as a potential security anomaly.
+
 ---
 
 #### **🕵️ SOC Analyst Technical Insight**
