@@ -23,8 +23,8 @@ In this initial capture, I am establishing a baseline of standard outbound DNS q
 * **Timing (Aperiodicity):** The "Time" column reveals irregular intervals (jumps between 4s, 7s, and 12s). The lack of a rhythmic "heartbeat" suggests manual user interaction rather than an automated script or bot.
 
 #### **Evidence**
-![Normal DNS Baseline](.<img width="1501" height="978" alt="baselin DNS" src="https://github.com/user-attachments/assets/b2b84ba2-50f0-4d85-8197-7a2a18977388" />
-/normal%20dns.flags%20re.jpg)
+<img width="1501" height="978" alt="baselin DNS" src="https://github.com/user-attachments/assets/b2b84ba2-50f0-4d85-8197-7a2a18977388" />
+
 *Figure 1: Wireshark capture highlighting diverse, aperiodic DNS queries.*
 
 ---
