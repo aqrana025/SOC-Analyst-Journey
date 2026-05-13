@@ -81,6 +81,12 @@ As a SOC Analyst, I must verify anything that looks "doubtful" or "periodic." In
 *   **Blending In:** Attackers don't want to stand out; they want to look like a 5-second `ping` loop.
 *   **Financial Impact:** Proactive verification saves millions by catching "silent" threats before they escalate
 
+> [!IMPORTANT]
+> **Why investigate the PID?**
+> In a real-world investigation, the Process ID (PID) is the "DNA" of the activity. While Wireshark tells us *traffic* is flowing, the PID tells us *which specific program* is responsible. 
+> 
+> By tracing the PID back to its **Parent Process**, I can determine if the activity was started by a human (e.g., via `terminal`) or by a hidden malicious script (e.g., a macro inside a fake PDF). This step is what separates a standard analyst from an elite threat hunter.
+
 ### **Step 3: DNS Brute-Force Attack**
 * **Scenario:** Guessing subdomains to find hidden services.
 * **Observation:** A massive spike in `NXDOMAIN` (Non-Existent Domain) responses in a very short window.
