@@ -47,7 +47,40 @@ Looking at the packet details for the selected frame in **figure 1**, the **Tota
 ### **Step 2: Automated Behaviour (The Pulse)**
 * **Scenario:** Rhythmic `ping` command to a single domain.
 * **Observation:** The "Time" column in Wireshark shows queries at perfect 5-second intervals. This is non-human "heartbeat" traffic.
-> **[INSERT SCREENSHOT 2 HERE]**
+> **<img width="1701" height="960" alt="ping" src="https://github.com/user-attachments/assets/7e265af5-89e1-4f58-8ce2-dfe68fd505b6" />
+**
+
+---
+
+### **Phase 2.5: Endpoint Verification & The "Visibility Gap"**
+
+#### **The Observation**
+After identifying a rhythmic DNS "heartbeat" in Wireshark, I pivoted to the **Wazuh Dashboard** to correlate the network activity with endpoint telemetry. As shown in **waz test.png**, the agent `kali-sowrd` is active and healthy, yet the dashboard shows no security alerts triggered by the automated loop.
+
+#### **Technical Analysis: Why "Quiet" is a Risk**
+*   **The Baseline Trap:** This activity is currently classified as "Normal/Quiet" by the system's default ruleset.
+*   **Attacker Behavior:** Elite-level threat actors avoid "loud" exploits. They use **Living-off-the-Land (LotL)** techniques—using built-in tools like `ping` or `nslookup`—to blend in with standard administrative traffic.
+*   **The Assumption Risk:** If an analyst assumes that "No Alert = No Threat," they may miss a low-and-slow Command & Control (C2) beacon. 
+
+#### **Evidence**
+<img width="1853" height="1034" alt="waz test" src="https://github.com/user-attachments/assets/cf646ad9-b0e1-4974-ad69-e6f92d33b64d" />
+
+*Figure 3: Wazuh dashboard showing an active agent but a flat event line for the background heartbeat.*
+
+---
+
+#### **🕵️ SOC Analyst Technical Insight**
+In **waz test.png**, the **Events count evolution** is flat despite the active loop. This confirms a **Visibility Gap**. 
+
+As a SOC Analyst, I must verify anything that looks "doubtful" or "periodic." In a real-world scenario, attackers hide their communications inside these mundane loops. By refusing to assume safety, I protect the organization from the massive financial and reputational costs of a long-term breach. 
+
+> **Expert Mindset:** We do not assume safety; we prove it. If a network pattern is periodic but the endpoint is silent, we must investigate the process ID (PID) to confirm legitimacy.
+
+#### **The Expert "Think" Points (Recap)**
+*   **Verification over Assumption:** Does a lack of alerts mean the system is safe, or is the "security camera" just pointing the wrong way?
+*   **Blending In:** Attackers don't want to stand out; they want to look like a 5-second `ping` loop.
+*   **Financial Impact:** Proactive verification saves millions by catching "silent" threats before they escalate.<img width="1701" height="960" alt="ping" src="https://github.com/user-attachments/assets/add6f918-55e0-49c1-a01e-ef648838f4d7" />
+
 
 ### **Step 3: DNS Brute-Force Attack**
 * **Scenario:** Guessing subdomains to find hidden services.
