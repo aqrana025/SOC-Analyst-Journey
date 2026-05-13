@@ -79,8 +79,7 @@ As a SOC Analyst, I must verify anything that looks "doubtful" or "periodic." In
 #### **The Expert "Think" Points (Recap)**
 *   **Verification over Assumption:** Does a lack of alerts mean the system is safe, or is the "security camera" just pointing the wrong way?
 *   **Blending In:** Attackers don't want to stand out; they want to look like a 5-second `ping` loop.
-*   **Financial Impact:** Proactive verification saves millions by catching "silent" threats before they escalate.<img width="1701" height="960" alt="ping" src="https://github.com/user-attachments/assets/add6f918-55e0-49c1-a01e-ef648838f4d7" />
-
+*   **Financial Impact:** Proactive verification saves millions by catching "silent" threats before they escalate
 
 ### **Step 3: DNS Brute-Force Attack**
 * **Scenario:** Guessing subdomains to find hidden services.
